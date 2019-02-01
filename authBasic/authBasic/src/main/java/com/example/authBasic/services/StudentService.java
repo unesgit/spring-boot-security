@@ -22,8 +22,8 @@ public class StudentService {
         Course course2 = new Course("Course2", "Spring MVC", "10 Examples",
                 Arrays.asList("Learn Maven", "Import Project", "First Example", "Second Example"));
         
-        Student ranga = new Student("Student1", "Younes", "Nadir", "Hiker, Programmer and Architect",
-                new ArrayList<>(Arrays.asList(course1, course2)));
+        Student ranga = new Student("Unes", "Pass", Arrays.asList(new String[] { "student" }), "Student1", "Younes", "Nadir",
+                "Hiker, Programmer and Architect", new ArrayList<>(Arrays.asList(course1, course2)));
         
         students.add(ranga);
     }

@@ -9,8 +9,9 @@ public class Student extends AppUser {
     private List<Course> courses;
     private String lastName;
     
-    public Student(String id, String name, String lastName, String description, List<Course> courses) {
-        super();
+    public Student(String userName, String password, List<String> roleList, String id, String name, String lastName, String description,
+            List<Course> courses) {
+        super(userName, password, roleList);
         this.id = id;
         this.name = name;
         this.description = description;

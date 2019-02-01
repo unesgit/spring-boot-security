@@ -8,6 +8,13 @@ public class AppUser {
     private String password;
     private List<String> roleList;
     
+    public AppUser(String userName, String password, List<String> roleList) {
+        super();
+        this.userName = userName;
+        this.password = password;
+        this.roleList = roleList;
+    }
+    
     public String getUserName() {
         return userName;
     }
