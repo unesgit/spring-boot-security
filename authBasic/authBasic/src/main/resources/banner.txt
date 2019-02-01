@@ -1,0 +1,4 @@
+banner banner ${application.formatted-version} ${spring-boot.version} ${spring-boot.formatted-version} ${application.title}
+
+Reference: http://www.springboottutorial.com/securing-rest-services-with-spring-boot-starter-security
+PPT: https://docs.spring.io/spring-security/site/docs/current/guides/html5/helloworld-boot.html
