@@ -24,6 +24,8 @@ public class StudentController {
     
     @GetMapping("/students")
     public List<Student> retrieveAllStudents() {
+        // Students can only be viewed by admin Role.@See
+        // StudentService.getStudents() annotation
         return studentService.getStudents();
     }
 }

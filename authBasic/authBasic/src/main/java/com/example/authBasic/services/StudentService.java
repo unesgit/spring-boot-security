@@ -56,6 +56,8 @@ public class StudentService {
         return courses;
     }
     
+    // @PreAuthorize("hasRole('ROLE_ADMIN')")
+    // @Secured("ROLE_ADMIN")
     public List<Student> getStudents() {
         return Collections.unmodifiableList(students);
     }

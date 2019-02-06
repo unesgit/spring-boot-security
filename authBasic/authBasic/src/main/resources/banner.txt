@@ -2,3 +2,15 @@ banner banner ${application.formatted-version} ${spring-boot.version} ${spring-b
 
 Reference: http://www.springboottutorial.com/securing-rest-services-with-spring-boot-starter-security
 PPT: https://docs.spring.io/spring-security/site/docs/current/guides/html5/helloworld-boot.html
+
+
+@Secured annotation is used to specify a list of roles on a method.  doesn’t support Spring Expression Language (SpEL).
+@RoleAllowed annotation is the JSR-250’s equivalent annotation of the @Secured annotation.
+@PreAuthorize and @PostAuthorize annotations provide expression-based access control. Hence, predicates can be written using SpEL (Spring Expression Language).
+@PreAuthorize("hasRole('ROLE_VIEWER')")
+@PostAuthorize annotation provides the ability to access the method result:
+@PostAuthorize
+  ("returnObject.username == authentication.principal.nickName")
+public CustomUser loadUserDetail(String username) {
+    return userRoleRepository.loadUserByUserName(username);
+}
