@@ -2,16 +2,14 @@ package com.example.authBasic.model;
 
 import java.util.List;
 
-public class Student extends AppUser {
+public class Student {
     private String id;
     private String name;
     private String description;
     private List<Course> courses;
     private String lastName;
     
-    public Student(String userName, String password, List<String> roleList, String id, String name, String lastName, String description,
-            List<Course> courses) {
-        super(userName, password, roleList);
+    public Student(String id, String name, String lastName, String description, List<Course> courses) {
         this.id = id;
         this.name = name;
         this.description = description;

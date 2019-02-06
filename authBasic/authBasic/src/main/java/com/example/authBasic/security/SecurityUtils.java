@@ -10,8 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 
-import com.example.authBasic.security.user.CurrentUser;
-
 /**
  * @author y.nadir
  *
@@ -23,11 +21,11 @@ public class SecurityUtils {
     }
     
     public static String getConnectedUserName() {
-        return ((CurrentUser) getAuthentication().getPrincipal()).getUsername();
+        return ((User) getAuthentication().getPrincipal()).getUsername();
     }
     
     public static String getConnectedUserPassword() {
-        return ((CurrentUser) getAuthentication().getPrincipal()).getPassword();
+        return ((User) getAuthentication().getPrincipal()).getPassword();
     }
     
     public static Collection<? extends GrantedAuthority> getConnectedUserRoles() {
@@ -35,7 +33,7 @@ public class SecurityUtils {
     }
     
     public static User getConnectedUserDetails() {
-        return (CurrentUser) getAuthentication().getDetails();
+        return (User) getAuthentication().getDetails();
     }
     
     private static Authentication getAuthentication() {

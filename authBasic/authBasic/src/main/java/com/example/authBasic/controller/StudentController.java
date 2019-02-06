@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.authBasic.model.Course;
+import com.example.authBasic.model.Student;
 import com.example.authBasic.services.StudentService;
 
 @RestController
@@ -19,5 +20,10 @@ public class StudentController {
     @GetMapping("/students/{studentId}/courses")
     public List<Course> retrieveCoursesForStudent(@PathVariable String studentId) {
         return studentService.retrieveCourses(studentId);
+    }
+    
+    @GetMapping("/students")
+    public List<Student> retrieveAllStudents() {
+        return studentService.getStudents();
     }
 }
